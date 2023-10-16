@@ -1,18 +1,19 @@
 version: '3.5'
 services:
 
-#  task:
-#    container_name: task
-#    image: task
-#    build: .
-#    depends_on:
-#      postgres:
-#        condition: service_started
-##    restart: always
-##    volumes:
-##      - ./lib/postgresql-42.3.8.jar:/var/lib/postgresql-42.3.8.jar
-#    ports:
-#      - "8080:8080"
+  task:
+    container_name: task
+    image: task
+    build: .
+    depends_on:
+      postgres:
+        condition: service_started
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+     - postgres
+
 
   postgres:
     container_name: postgres
