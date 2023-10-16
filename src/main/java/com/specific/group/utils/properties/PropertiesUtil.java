@@ -6,6 +6,9 @@ import java.util.Properties;
 
 import static com.specific.group.constants.Constants.Database.PATH_FILL;
 
+/**
+ * Util class for find and get properties from application.properties file.
+ */
 public class PropertiesUtil {
 
     private static final Properties PROPERTIES = new Properties();

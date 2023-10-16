@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Provides methode for processing input data from controller and send them to dao
+ * Provides methods for processing input data from controller and send them to dao layer
  */
 public interface Service {
 
@@ -38,7 +38,7 @@ public interface Service {
     long update(UpdateDto dto);
 
     /**
-     * Methode validation and send data to dao
+     * Method validation and send data to dao
      *
      * @param id a string
      * @return a boolean result

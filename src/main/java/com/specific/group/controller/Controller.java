@@ -27,6 +27,7 @@ import static com.specific.group.constants.Constants.HttpConstants.HttpResponseS
 import static com.specific.group.constants.Constants.HttpConstants.HttpResponseStatus.STATUS_NOT_FOUND;
 import static com.specific.group.constants.Constants.HttpConstants.HttpResponseStatus.STATUS_NO_CONTENT;
 import static com.specific.group.constants.Constants.HttpConstants.HttpResponseStatus.STATUS_OK;
+import static com.specific.group.dao.Attributes.ID;
 
 public interface Controller {
 
@@ -103,12 +104,12 @@ public interface Controller {
                 int status;
                 if (requestType.matches(REG_POST_CREATE)) {
                     id = create(httpExchange);
-                    jsonObject.put(Attributes.ID, id);
+                    jsonObject.put(ID, id);
                     status = id < 0 ? STATUS_NOT_FOUND : STATUS_CREATED;
                     writeResponse(httpExchange, List.of(jsonObject), status);
                 } else if (requestType.matches(REG_POST_UPDATE)) {
                     id = update(httpExchange);
-                    jsonObject.put(Attributes.ID, id);
+                    jsonObject.put(ID, id);
                     status = id < 0 ? STATUS_NOT_FOUND : STATUS_CREATED;
                     writeResponse(httpExchange, List.of(jsonObject), status);
                 } else {

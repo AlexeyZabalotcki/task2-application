@@ -1,3 +1,17 @@
+# __Application overview:__
+___
+
+The project is a simple CRUD application without the use of third-party dependencies.
+
+Allows you to interact with employees (search, create, modify and delete information about them)
+
+When the application is started, 3 tables are created in the database:
+* `department`
+* `position`
+* `employee`
+
+The tables are automatically filled with data.
+
 # __Project setup steps:__
 ___
 

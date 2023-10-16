@@ -3,7 +3,7 @@ package com.specific.group.utils.connection;
 import java.util.Map;
 
 /**
- * Provides design pattern abstract method for create connection poll
+ * Provides design pattern abstract method for create connection pool
  */
 public class AbstractConnectionPool {
     private AbstractConnectionPool() {

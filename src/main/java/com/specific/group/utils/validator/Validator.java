@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.function.Predicate;
 
 /**
- * Provides method for validation input data
+ * Provides methods for validation input data
  *
  * @param <T>
  */

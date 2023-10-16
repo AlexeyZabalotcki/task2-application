@@ -7,6 +7,9 @@ import java.io.IOException;
 
 import static com.specific.group.constants.Constants.HttpConstants.HttpResponseStatus.STATUS_NOT_FOUND;
 
+/**
+ * Main handler for all http request and response.
+ */
 public class Handler {
 
     private final Controller controller;

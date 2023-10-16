@@ -8,6 +8,9 @@ import java.util.Map;
 
 import static com.specific.group.dao.Sql.Select.*;
 
+/**
+ * Util class which provides methods for create requests to the database
+ */
 public class JdbcUtils {
     public static void setStatement(PreparedStatement preparedStatement, Object[] seq) throws SQLException {
         for (int i = 1; i < seq.length + 1; i++) {
