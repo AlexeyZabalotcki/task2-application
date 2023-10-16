@@ -179,7 +179,7 @@ public interface Controller {
         Headers responseHeaders = httpExchange.getResponseHeaders();
         StringBuilder db = new StringBuilder();
         for (JsonObject jsonObject : jsonObjects) {
-            db.append(jsonObject.toJson());
+            db.append(jsonObject.toJson()).append("\n");
         }
         responseHeaders.add("Content-type", "application/json");
         response(httpExchange, status, db.toString().getBytes(StandardCharsets.UTF_8).length);

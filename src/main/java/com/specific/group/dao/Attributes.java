@@ -11,7 +11,9 @@ public enum Attributes implements JsonKey {
     FIRST_NAME,
     LAST_NAME,
     DEPARTMENT_ID,
-    POSITION_ID;
+    POSITION_ID,
+    DEPARTMENT_NAME,
+    POSITION_NAME;
 
     @Override
     public String getKey() {

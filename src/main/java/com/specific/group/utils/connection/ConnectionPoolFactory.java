@@ -4,11 +4,14 @@ import com.specific.group.utils.properties.PropertiesUtil;
 
 import java.util.Map;
 
-import static com.specific.group.utils.connection.ConnectionPoolFabric.PropertiesFile.*;
+import static com.specific.group.utils.connection.ConnectionPoolFactory.PropertiesFile.*;
 
-public class ConnectionPoolFabric {
+/**
+ * Provides design pattern factory method for create different connections to database
+ */
+public class ConnectionPoolFactory {
 
-    private ConnectionPoolFabric() {
+    private ConnectionPoolFactory() {
         throw new UnsupportedOperationException();
     }
 

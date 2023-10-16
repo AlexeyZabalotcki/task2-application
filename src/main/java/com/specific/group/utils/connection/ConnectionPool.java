@@ -68,6 +68,12 @@ public enum ConnectionPool {
         }
     }
 
+    /**
+     * Method returns connection from connection pool if connection valid and exists.
+     * If not creates and returns new connection.
+     *
+     * @return Connection to database.
+     */
     public Connection openConnection() {
         Connection connection = null;
         try {
@@ -82,7 +88,10 @@ public enum ConnectionPool {
         return connection;
     }
 
-
+    /**
+     * Method makes proxy connection
+     * When connection is closed, proxy returns it to Queue.
+     */
     private void createProxyConnection() {
         final Connection connection;
         try {

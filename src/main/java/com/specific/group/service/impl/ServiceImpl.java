@@ -14,11 +14,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static com.specific.group.constants.Constants.Messages.WRONG_DEPARTMENT;
-import static com.specific.group.constants.Constants.Messages.WRONG_ID;
-import static com.specific.group.constants.Constants.Messages.WRONG_NAME;
-import static com.specific.group.constants.Constants.Messages.WRONG_POSITION;
-import static com.specific.group.dao.Attributes.*;
+import static com.specific.group.constants.Constants.Messages.*;
+import static com.specific.group.dao.Attributes.DEPARTMENT_ID;
+import static com.specific.group.dao.Attributes.DEPARTMENT_NAME;
+import static com.specific.group.dao.Attributes.FIRST_NAME;
+import static com.specific.group.dao.Attributes.ID;
+import static com.specific.group.dao.Attributes.LAST_NAME;
+import static com.specific.group.dao.Attributes.POSITION_ID;
+import static com.specific.group.dao.Attributes.POSITION_NAME;
 import static com.specific.group.dao.Sql.Constant.INVALID_RESULT;
 import static com.specific.group.service.RegularExpression.REG_DIGIT;
 import static com.specific.group.service.RegularExpression.REG_NAME;
@@ -107,8 +110,7 @@ public class ServiceImpl implements Service {
             try {
                 attributes.forEach((k, v) -> {
                     switch (k) {
-                        case ID ->
-                                validator.validator(var -> var.get(ID).matches(REG_DIGIT), WRONG_ID);
+                        case ID -> validator.validator(var -> var.get(ID).matches(REG_DIGIT), WRONG_ID);
                         case FIRST_NAME ->
                                 validator.validator(var -> var.get(FIRST_NAME).matches(RegularExpression.REG_NAME), WRONG_NAME);
                         case LAST_NAME ->
@@ -131,7 +133,9 @@ public class ServiceImpl implements Service {
             json.put(FIRST_NAME, search.getFirstName());
             json.put(LAST_NAME, search.getLastName());
             json.put(DEPARTMENT_ID, search.getDepartment().getId());
+            json.put(DEPARTMENT_NAME, search.getDepartment().getName());
             json.put(POSITION_ID, search.getPosition().getId());
+            json.put(POSITION_NAME, search.getPosition().getName());
             jsonObjects.add(json);
         }
         return jsonObjects;

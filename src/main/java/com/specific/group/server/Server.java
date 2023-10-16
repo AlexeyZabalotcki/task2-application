@@ -23,7 +23,7 @@ public class Server {
     public void start() {
         try {
             server = HttpServer.create();
-            server.bind(new InetSocketAddress(8081), 0);
+            server.bind(new InetSocketAddress(8080), 0);
             handlers.forEach((path, hand) -> server.createContext(path, hand::handle));
             server.start();
         } catch (IOException e) {
