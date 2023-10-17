@@ -39,7 +39,7 @@ ___
 * For find specific employee by his id use: GET ```http://localhost:8080/employee/search?id=<id>```
 
     _instead of `<id>` paste your desired `id`_
-* For find by firstname, lastname, department or position use: GET ```http://localhost:8080/employee/search?<firstname/lastname/department/position>=```
+* For find by firstName, lastName, departmentId or positionId use: GET ```http://localhost:8080/employee/search?<firstName/lastName/departmentId/positionId>=```
     For example:
     
     * For find employee by `positionId` = `2` : GET ```http://localhost:8080/employee/search?positionId=2```
