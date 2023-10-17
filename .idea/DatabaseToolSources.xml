@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DatabaseToolSources">
-    <data-source name="172.26.0.1" uuid="d931cb2b-c196-4802-b91d-6f58c3d71828" type="POSTGRES">
-      <base-info connect-type="DB_DEFAULT" product="PostgreSQL" version="16.0 (Debian 16.0-1.pgdg120+1)" jdbc-name="PostgreSQL JDBC Driver" jdbc-version="42.6.0" />
-      <user-name>postgres</user-name>
+    <data-source name="localhost" uuid="dc3a2a35-f025-491a-967b-4a78300e0dde" type="POSTGRES">
+      <base-info connect-type="DB_DEFAULT" product="PostgreSQL" version="13.12 (Debian 13.12-1.pgdg120+1)" jdbc-name="PostgreSQL JDBC Driver" jdbc-version="42.6.0" />
+      <user-name>test</user-name>
       <schema-mapping>
         <introspection-scope>
           <node negative="1">
@@ -15,7 +15,7 @@
           </node>
         </introspection-scope>
       </schema-mapping>
-      <url>jdbc:postgresql://172.26.0.1:5432/postgres</url>
+      <url>jdbc:postgresql://localhost:53337/test</url>
       <remarks />
       <vm-options />
       <driver-info id="postgresql" />
